@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://cylrex4k5fd52"]
 
-[ext_resource type="Texture2D" uid="uid://ds7m6v042yrwt" path="res://assets/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="1_7u3wt"]
+[ext_resource type="Texture2D" uid="uid://bfqpjki05487l" path="res://assets/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="1_7u3wt"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ulbch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6b0ay"]
