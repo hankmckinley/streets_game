@@ -1,0 +1,8 @@
+# Godot specific
+/.import/
+/export/
+/.mono/
+/.idea/
+/.vscode/
+*.godot
+*.import
