@@ -1,6 +1,3 @@
-res://game.tscn
+res://scenes/NPC.tscn
 res://scenes/game.tscn
-res://scenes/character_body_2d.tscn
 res://scenes/player.tscn
-res://scripts/player.gd
-res://scenes/player.gd
