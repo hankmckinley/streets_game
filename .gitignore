@@ -4,5 +4,4 @@
 /.mono/
 /.idea/
 /.vscode/
-*.godot
 *.import
