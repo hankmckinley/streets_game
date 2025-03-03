@@ -1,3 +1,7 @@
-res://scenes/NPC.tscn
 res://scenes/game.tscn
 res://scenes/player.tscn
+res://scenes/NPC.tscn
+res://helpers/actionable.tscn
+res://helpers/actionable.gd
+res://scripts/player.gd
+res://dialogue/balloon.tscn

@@ -1,9 +1,21 @@
 extends CharacterBody2D
 
 @export var speed = 100
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
+
+
 
 func _physics_process(delta):
+	
+
 	var direction = Vector2.ZERO
+	
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
 
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
@@ -22,7 +34,7 @@ func _physics_process(delta):
 		direction = direction.normalized()
 		$AnimatedSprite2D.play()
 	else:
-		$AnimatedSprite2D.animation ="idle"
+		# $AnimatedSprite2D.animation ="idle"
 		$AnimatedSprite2D.stop()
 
 	velocity = direction * speed

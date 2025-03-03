@@ -1,9 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://cylrex4k5fd52"]
+[gd_scene load_steps=19 format=3 uid="uid://cylrex4k5fd52"]
 
 [ext_resource type="Texture2D" uid="uid://bfqpjki05487l" path="res://assets/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png" id="1_7u3wt"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ulbch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6b0ay"]
+atlas = ExtResource("1_7u3wt")
+region = Rect2(384, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gycyu"]
 atlas = ExtResource("1_7u3wt")
 region = Rect2(384, 0, 16, 16)
 
@@ -15,9 +19,9 @@ region = Rect2(384, 32, 16, 16)
 atlas = ExtResource("1_7u3wt")
 region = Rect2(384, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gycyu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjuba"]
 atlas = ExtResource("1_7u3wt")
-region = Rect2(384, 0, 16, 16)
+region = Rect2(368, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wisbr"]
 atlas = ExtResource("1_7u3wt")
@@ -27,9 +31,9 @@ region = Rect2(368, 16, 16, 16)
 atlas = ExtResource("1_7u3wt")
 region = Rect2(368, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gjuba"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fk1u"]
 atlas = ExtResource("1_7u3wt")
-region = Rect2(368, 0, 16, 16)
+region = Rect2(416, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8l6c"]
 atlas = ExtResource("1_7u3wt")
@@ -39,9 +43,9 @@ region = Rect2(416, 32, 16, 16)
 atlas = ExtResource("1_7u3wt")
 region = Rect2(416, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2fk1u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_16tci"]
 atlas = ExtResource("1_7u3wt")
-region = Rect2(416, 0, 16, 16)
+region = Rect2(400, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcuql"]
 atlas = ExtResource("1_7u3wt")
@@ -50,10 +54,6 @@ region = Rect2(400, 32, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_2jo6w"]
 atlas = ExtResource("1_7u3wt")
 region = Rect2(400, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_16tci"]
-atlas = ExtResource("1_7u3wt")
-region = Rect2(400, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cfik8"]
 animations = [{
@@ -67,13 +67,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gycyu")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8jp36")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlbts")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gycyu")
 }],
 "loop": true,
 "name": &"move_down",
@@ -81,13 +81,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gjuba")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_wisbr")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_455bk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gjuba")
 }],
 "loop": true,
 "name": &"move_left",
@@ -95,13 +95,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_2fk1u")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_a8l6c")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ouara")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2fk1u")
 }],
 "loop": true,
 "name": &"move_right",
@@ -109,13 +109,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_16tci")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lcuql")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2jo6w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_16tci")
 }],
 "loop": true,
 "name": &"move_up",
@@ -124,6 +124,9 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_34rne"]
 radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kmja4"]
+radius = 13.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ulbch")
@@ -136,3 +139,15 @@ centered = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 12)
 shape = SubResource("CircleShape2D_34rne")
+
+[node name="Direction" type="Marker2D" parent="."]
+position = Vector2(8, 12)
+rotation = 1.5708
+
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+position = Vector2(-1.31134e-07, 0)
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+shape = SubResource("CircleShape2D_kmja4")

@@ -1,0 +1,217 @@
+~ pop_start
+Pop: Welcome in, kid. What can I do for ya?
+
+- Tell me about this neighborhood.
+	Pop: Oh, I'm not sure. Been here longer than some of these buildings that's for sure. Folks look out for each other here. It’s got its ups and downs, but it’s home.
+
+	- Has it always been like this?
+		Pop: More or less. Used to be more kids running around. Boy was it hectic back then!
+		=> pop_start
+		
+	- What do you like most about it?
+		Pop: The people. I know most of my customers by name. I see kids grow up, parents working hard, neighbors helping neighbors. Some things change and some stay the same.
+		=> pop_start
+
+- How long have you had this store?
+	Pop: This bodega has been in my family for three generations. My granddad opened it when he moved here, then my pops. Now it's me. A lotta history in these walls.
+
+	- Did you always want to run it?
+		Pop: Nah, when I was a kid, I thought I’d do something else. But when my pops got older, I stepped in. Now I can’t imagine doing anything different.
+		=> pop_start
+
+	- Do you think your kids will take over?
+		Pop: Hard to say. They got their own dreams, and I want them to chase ‘em. But if they ever wanna run the store, I’d be proud to pass it on.
+		=> pop_start
+
+- Why is this store so important?
+	Pop: You gotta understand, places like this ain't just stores. We keep folks fed when times are tight, we keep an eye on the block. Somebody needs help, they come here. It's more than just a place to by food.
+
+- What kinds of things do you sell?
+	Pop: Coffee, eggs, bread. The basics. And of course, my famous sandwiches. You ever had one?
+
+	- No, what’s so special about them?
+		Pop: It’s the love, kid. And the secret seasoning. I of course can’t tell you what it is, but once you try one, you’ll keep coming back.
+		=> pop_start
+
+	- Yeah, they’re great!
+		Pop: Ha! You got good taste. Let me know if you ever want another.
+		=> pop_start
+
+- How do you keep the store running?
+	Pop: Hard work, kid. And knowing your customers, you gotta give them a reason to come by even if we ain't always the cheapest. 
+
+	- Do you ever think about expanding?
+		Pop: Nah, this place is enough. I ain’t looking to be some big chain. This is a neighborhood shop, always will be.
+		=> pop_start
+
+	- What’s the hardest part of running it?
+		Pop: The hours. Early mornings, late nights. But it’s worth it.
+		=> pop_start
+
+- I don’t have any more questions.
+	Pop: Alright then. But if you ever need somethin’, you know where to find me.
+	=> END
+
+
+~ margaret_start
+Margaret: Oh, hey there! Beautiful day, isn’t it? What’s on your mind?
+
+- How do you like the neighborhood?
+	Margaret: I love it here. Moved in five years ago, and it already feels like home. It’s such a great place for kids to grow up.
+
+	- Why is it good for kids?
+		Margaret: Oh, there’s so much for them to do! Parks, schools, little events—plus, everyone looks out for each other. I never feel like I’m on my own raising them.
+		=> margaret_start
+
+	- Do you feel safe here?
+		Margaret: Absolutely. When you know your neighbors, you know someone’s always got your back. It’s not just a street; it’s a community.
+		=> margaret_start
+
+- Have your kids made a lot of friends?
+	Margaret: Oh, tons! They run off to play the second we step outside. It’s nice knowing they’re growing up with people who care about them.
+	=> margaret_start
+
+- What’s your favorite part of living here?
+	Margaret: The people, hands down. There’s always a familiar face, always someone to talk to. It just feels right, y’know?
+	=> margaret_start
+
+- I don’t have any more questions.
+	Margaret: Well, if you ever wanna chat, I’m usually right here with the little ones. Take care!
+	=> margaret_start
+
+
+~ frank_start
+Frank: Hey there, welcome to Frank’s! What can I get you?
+
+- How long have you had this place?
+	Frank: Opened it myself fifteen years ago. Best decision I ever made. This shop? It’s my pride and joy.
+
+	- What made you want to start a coffee shop?
+		Frank: Always loved coffee, always loved people. Figured, why not put ‘em together? Turns out, I’m pretty good at it.
+		=> frank_start
+
+	- Do you ever think about expanding?
+		Frank: Nah, I like knowing my customers, not just serving ‘em. Once you go big, you lose that personal touch.
+		=> frank_start
+
+- What’s the most popular drink here?
+	Frank: My house blend. Smooth, rich, and better than anything you’ll find at those chains.
+	=> frank_start
+
+- What do you think about Starbucks?
+	Frank: Overpriced, burnt coffee with no soul. Folks come here ‘cause they want something real.
+	=> frank_start
+
+- I don’t have any more questions.
+	Frank: No problem. Come by anytime—coffee’s always fresh.
+	=> frank_start
+
+
+~ percy_start
+Percy: Yo, what’s up? You hoop?
+
+- Do you play here a lot?
+	Percy: Every day. Court’s free, my friends live close—it’s perfect. Nothin’ better than ballin’ with your crew.
+
+	- Are you good?
+		Percy: You kiddin’? I got handles, I got a shot. You wanna see?
+		=> percy_start
+
+	- Who’s the best player here?
+		Percy: Me, obviously. But my boy Jamal? He’s got a nasty crossover.
+		=> percy_start
+
+- Do a lot of kids come here?
+	Percy: Oh yeah, this place is always packed after school. Everyone knows this is the spot.
+	=> percy_start
+
+- What do you like most about playing here?
+	Percy: It’s just fun, man. No refs, no stress, just the game and the homies.
+	=> percy_start
+
+- I don’t have any more questions.
+	Percy: Aight, cool. I’ll be here if you ever wanna run a game.
+	=> percy_start
+
+
+~ beth_start
+Beth: Oh, hello dear. You waiting for service, or just stopping by?
+
+- Do you come here often?
+	Beth: Every Sunday, and most days in between. This church isn’t just a place to pray—it’s where people come together.
+
+	- What do you mean?
+		Beth: Oh, it’s everything. Potlucks, meetings, folks helping each other out. If someone needs something, the church is here.
+		=> beth_start
+
+	- Have you been coming here long?
+		Beth: Since I was a little girl. This place has always been part of my life.
+		=> beth_start
+
+- What do you like most about it?
+	Beth: The people. We all take care of each other. That’s what a real community does.
+	=> beth_start
+
+- I don’t have any more questions.
+	Beth: Alright then, dear. But you’re always welcome here.
+	=> beth_start
+
+~ park_extra_1  
+Person: Love bringing my kids here. It’s always so peaceful.  
+- Sounds like a great spot.  
+  => END  
+
+~ park_extra_2  
+Person: I like how clean they keep this park. Makes a big difference.  
+- Yeah, it really does.  
+  => END  
+
+~ park_extra_3  
+Person: The trees here give the best shade in the summer.  
+- That’s a good thing to have.  
+  => END  
+ 
+~ coffee_extra_1  
+Person: Frank makes the best coffee in town, hands down.  
+- Can’t argue with that.  
+  => END  
+
+~ coffee_extra_2  
+Person: I come here every morning. Can’t start my day without it.  
+- Gotta have that routine.  
+  => END  
+
+~ coffee_extra_3  
+Person: This place has a real personal touch. Not like those big chains.  
+- Yeah, feels more welcoming.  
+  => END  
+
+~ court_xtra_1  
+Person: Best court in the city. We got some real competition out here.  
+- Sounds like a good time.  
+  => END  
+
+~ court_extra_2  
+Person: I grew up playing here. Good to see the next generation still ballin’.  
+- That’s always cool to see.  
+  => END  
+
+~ court_extra_3  
+Person: Love that it’s free. Not everyone can afford a gym membership.  
+- Yeah, that makes a big difference.  
+  => END  
+
+~ church_extra_1  
+Person: This church has been a part of my family for generations.  
+- That’s really special.  
+  => END  
+
+~ church_extra_2  
+Person: Everyone here is so welcoming. Feels like home.  
+- That’s a great thing to have.  
+  => END  
+
+~ church_extra_3  
+Person: The potlucks here are the best. You ever had Mrs. Thompson’s casserole?  
+- Sounds like I’m missing out.  
+  => END  

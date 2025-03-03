@@ -1,7 +1,7 @@
 6b83eef13f46d74bce552f92a480ef09
-::res://::1740729072
+::res://::1740874450
+export_presets.cfg::TextFile::-1::1740778111::0::1::::<><>::
 icon.svg::CompressedTexture2D::3736917753103388935::1740594068::1740728966::1::::<><>::
-npc.gd::GDScript::-1::1740728672::0::1::::<>Area2D<>::
 ::res://addons/::1740728672
 ::res://addons/dialogue_manager/::1740728672
 constants.gd::GDScript::-1::1740728672::0::1::::DMConstants<>RefCounted<>::
@@ -76,7 +76,25 @@ dialogue_cache.gd::GDScript::-1::1740728672::0::1::::DMCache<>Node<>::
 ::res://addons/dialogue_manager/views/::1740728672
 main_view.gd::GDScript::-1::1740728672::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1740728672::0::1::::<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
-::res://assets/::1740645388
+::res://assets/::1740869615
+::res://assets/Custom Sprites/::1740874578
+coming soon.png::CompressedTexture2D::3619468449547273100::1740868210::1740869629::1::::<><>::
+Corepower.png::CompressedTexture2D::5720492519962370679::1740867994::1740869629::1::::<><>::
+franks.png::CompressedTexture2D::2062789109932703049::1740868349::1740869629::1::::<><>::
+starbucks.png::CompressedTexture2D::541888410768025319::1740867367::1740869629::1::::<><>::
+::res://assets/Custom Sprites/Characters/::1740877120
+Beth.png::CompressedTexture2D::6917119591772473760::1740875390::1740875839::1::::<><>::
+church_extra_1.png::CompressedTexture2D::3682961893402819659::1740875101::1740875839::1::::<><>::
+coffee_extra_1.png::CompressedTexture2D::3025501623047175232::1740874744::1740875839::1::::<><>::
+coffee_extra_2.png::CompressedTexture2D::7509502780424910960::1740876507::1740877120::1::::<><>::
+court_extra_1.png::CompressedTexture2D::7428139926409980463::1740876091::1740877120::1::::<><>::
+Margaret.png::CompressedTexture2D::533028497850234357::1740874780::1740875839::1::::<><>::
+Molly.png::CompressedTexture2D::9143380793628841609::1740875822::1740877120::1::::<><>::
+park_extra_1.png::CompressedTexture2D::2766249283508589364::1740875658::1740877120::1::::<><>::
+Percy.png::CompressedTexture2D::9868742145557318::1740876289::1740877120::1::::<><>::
+Pop.png::CompressedTexture2D::8580210849989776631::1740869595::1740875839::1::::<><>::
+store_extra_1.png::CompressedTexture2D::6561813508028328613::1740874657::1740875839::1::::<><>::
+store_extra_2.png::CompressedTexture2D::750881007838356885::1740874965::1740875839::1::::<><>::
 ::res://assets/kenney_roguelike-modern-city/::1740728966
 License.txt::TextFile::-1::1667104596::0::1::::<><>::
 Preview.png::CompressedTexture2D::297180741352198348::1667104678::1740728966::1::::<><>::
@@ -1617,10 +1635,21 @@ tile_0482.png::CompressedTexture2D::5532496002143208469::1546894902::1740728966:
 tile_0483.png::CompressedTexture2D::3710585103264716197::1546894902::1740728966::1::::<><>::
 tile_0484.png::CompressedTexture2D::5079078238904235210::1546894902::1740728966::1::::<><>::
 tile_0485.png::CompressedTexture2D::1221919508703398250::1546894902::1740728966::1::::<><>::
-::res://dialogue/::1740729072
-::res://scenes/::1740728979
-game.tscn::PackedScene::4415096573502320492::1740728979::0::1::::<><>::uid://cs5dt8bolyhxh::::res://assets/kenney_roguelike-modern-city/Tilemap/tilemap.png<>uid://cylrex4k5fd52::::res://scenes/player.tscn
-NPC.tscn::PackedScene::7466660289296957775::1740729080::0::1::::<><>::res://npc.gd<>uid://bhfonlma4yj3p::::res://assets/kenney_rpg-urban-pack/Tiles/tile_0105.png
-player.tscn::PackedScene::6481122355377313067::1740728979::0::1::::<><>::uid://bfqpjki05487l::::res://assets/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png<>res://scripts/player.gd
-::res://scripts/::1740702248
-player.gd::GDScript::-1::1740702248::0::1::::<>CharacterBody2D<>::
+::res://dialogue/::1740987447
+act_1_dialogue.dialogue::Resource::143673397872632004::1740874450::1740987603::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+balloon.gd::GDScript::-1::1740872083::0::1::::<>CanvasLayer<>::
+balloon.tscn::PackedScene::1981346121227073344::1740987603::0::1::::<><>::res://dialogue/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_responses_menu.gd
+::res://exports/::1740778322
+New Game Project.apple-touch-icon.png::CompressedTexture2D::4935010991197691795::1740778111::1740778322::1::::<><>::
+New Game Project.icon.png::CompressedTexture2D::4985108484462123257::1740778111::1740778322::1::::<><>::
+New Game Project.png::CompressedTexture2D::741179914570159613::1740778111::1740778322::1::::<><>::
+::res://helpers/::1740987447
+actionable.gd::GDScript::-1::1740872328::0::1::::<>Area2D<>::
+actionable.tscn::PackedScene::930157520577648720::1740987603::0::1::::<><>::res://helpers/actionable.gd
+::res://scenes/::1740987447
+game.tscn::PackedScene::4415096573502320492::1740987603::0::1::::<><>::uid://cs5dt8bolyhxh::::res://assets/kenney_roguelike-modern-city/Tilemap/tilemap.png<>uid://cylrex4k5fd52::::res://scenes/player.tscn<>uid://h4oryytf16h4::::res://assets/franks.png<>uid://br3t7kyc1cpkp::::res://assets/Custom Sprites/Pop.png<>uid://nits8t7qs7pc::::res://helpers/actionable.tscn<>uid://cbujrsdbyocy::::res://dialogue/act_1_dialogue.dialogue
+NPC.tscn::PackedScene::7466660289296957775::1740873327::0::1::::<><>::res://scripts/npc.gd<>uid://bhfonlma4yj3p::::res://assets/kenney_rpg-urban-pack/Tiles/tile_0105.png
+player.tscn::PackedScene::6481122355377313067::1740987603::0::1::::<><>::uid://bfqpjki05487l::::res://assets/kenney_rpg-urban-pack/Tilemap/tilemap_packed.png<>res://scripts/player.gd
+::res://scripts/::1740873124
+npc.gd::GDScript::-1::1740728672::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1740873124::0::1::::<>CharacterBody2D<>::
