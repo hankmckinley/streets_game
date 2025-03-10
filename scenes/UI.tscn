@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://xvtnifvswwpe"]
+
+[ext_resource type="Script" path="res://scripts/UI.gd" id="1_vi6k6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xy03r"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_color = Color(0.931962, 0.749524, 0.737984, 1)
+corner_detail = 1
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_vi6k6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -29.0
+offset_top = -29.0
+offset_right = 11.0
+offset_bottom = 11.0
+scale = Vector2(30.909, 17.733)
+color = Color(0.442911, 0.442911, 0.442911, 1)
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 60.0
+offset_top = 206.0
+offset_right = 100.0
+offset_bottom = 246.0
+scale = Vector2(26.6063, 9.7598)
+color = Color(0.664081, 0.349997, 0.16607, 1)
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 75.0
+offset_top = 445.0
+offset_right = 274.0
+offset_bottom = 481.0
+scale = Vector2(1.52129, 2.0729)
+theme_override_font_sizes/font_size = 15
+text = "Go to the beginning"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 445.0
+offset_right = 639.0
+offset_bottom = 481.0
+scale = Vector2(1.52129, 2.0729)
+theme_override_font_sizes/font_size = 15
+text = "Go to the middle"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 793.0
+offset_top = 445.0
+offset_right = 992.0
+offset_bottom = 481.0
+scale = Vector2(1.52129, 2.0729)
+theme_override_font_sizes/font_size = 15
+text = "Go to the beginning"
+
+[node name="Message" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 239.0
+offset_right = 509.0
+offset_bottom = 366.0
+scale = Vector2(1.46783, 1.21933)
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xy03r")
+text = "Welcome to the virtual neighborhood explorer. 
+Through this board you are able to jump between three 
+time periods this neighborhood experienced.
+
+ Feel free to explore, and hopefully learn something. "
+
+[connection signal="pressed" from="Button1" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button3_pressed"]

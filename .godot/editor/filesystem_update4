@@ -1,7 +1,11 @@
 res://scenes/game.tscn
 res://scenes/player.tscn
-res://scenes/NPC.tscn
 res://helpers/actionable.tscn
-res://helpers/actionable.gd
-res://scripts/player.gd
 res://dialogue/balloon.tscn
+res://scenes/info_hud.tscn
+res://scripts/info_hud.gd
+res://scripts/player.gd
+res://scripts/teleport.gd
+res://scenes/UI.tscn
+res://scripts/UI.gd
+res://helpers/actionable.gd

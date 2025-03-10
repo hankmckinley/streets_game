@@ -1,11 +1,14 @@
+ColorRect
+Label
 Sprite2D
 CollisionShape2D
+StaticBody2D
 Area2D
+Camera2D
+Button
+CanvasLayer
 Marker2D
 AnimatedSprite2D
-StaticBody2D
 AnimatableBody2D
 Node2D
 CharacterBody2D
-TileMapLayer
-Camera2D

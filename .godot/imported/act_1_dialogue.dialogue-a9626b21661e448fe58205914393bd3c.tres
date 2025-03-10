@@ -1,30 +1,32 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_dyr1y"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3h7uc"]
 
 [resource]
-script = ExtResource("1_dyr1y")
+script = ExtResource("1_3h7uc")
 using_states = PackedStringArray()
 titles = {
-"beth_start": "137",
-"church_extra_1": "204",
-"church_extra_2": "209",
-"church_extra_3": "214",
-"coffee_extra_1": "174",
-"coffee_extra_2": "179",
-"coffee_extra_3": "184",
-"court_extra_2": "194",
-"court_extra_3": "199",
-"court_xtra_1": "189",
-"frank_start": "83",
-"margaret_start": "56",
-"park_extra_1": "159",
-"park_extra_2": "164",
-"park_extra_3": "169",
-"percy_start": "110",
-"pop_start": "1"
+"beth_start": "145",
+"church_extra_1": "220",
+"church_extra_2": "225",
+"church_extra_3": "230",
+"coffee_extra_1": "190",
+"coffee_extra_2": "195",
+"coffee_extra_3": "200",
+"court_extra_1": "205",
+"court_extra_2": "210",
+"court_extra_3": "215",
+"margaret_start": "57",
+"molly_start": "84",
+"park_extra_1": "175",
+"park_extra_2": "180",
+"park_extra_3": "185",
+"percy_start": "118",
+"pop_start": "1",
+"store_extra_1": "167",
+"store_extra_2": "171"
 }
-character_names = PackedStringArray("Pop", "Margaret", "Frank", "Percy", "Beth", "Person")
+character_names = PackedStringArray("Pop", "Margaret", "Molly", "Percy", "Beth", "Person")
 first_title = "0"
 lines = {
 "0": {
@@ -48,20 +50,20 @@ lines = {
 "100": {
 "id": "100",
 "next_id": "101",
-"text": "What do you think about Starbucks?",
+"responses": PackedStringArray("100"),
+"text": "But your name's Molly?",
 "type": "response"
 },
 "101": {
-"character": "Frank",
 "id": "101",
 "next_id": "102",
-"text": "Overpriced, burnt coffee with no soul. Folks come here ‘cause they want something real.",
+"text": "Hank changed my name to Molly but did not want to draw the sign again...",
 "type": "dialogue"
 },
 "102": {
 "id": "102",
 "is_snippet": false,
-"next_id": "83",
+"next_id": "84",
 "next_id_after": "",
 "type": "goto"
 },
@@ -73,32 +75,40 @@ lines = {
 "104": {
 "id": "104",
 "next_id": "105",
-"text": "I don’t have any more questions.",
+"text": "What’s the most popular drink here?",
 "type": "response"
 },
 "105": {
-"character": "Frank",
+"character": "Molly",
 "id": "105",
 "next_id": "106",
-"text": "No problem. Come by anytime—coffee’s always fresh.",
+"text": "My house blend. Smooth, rich, and better than anything you’ll find at those chains.",
 "type": "dialogue"
 },
 "106": {
 "id": "106",
 "is_snippet": false,
-"next_id": "83",
+"next_id": "84",
 "next_id_after": "",
 "type": "goto"
 },
 "107": {
 "id": "107",
-"next_id": "109",
+"next_id": "108",
 "type": ""
 },
+"108": {
+"id": "108",
+"next_id": "109",
+"text": "What do you think about Starbucks?",
+"type": "response"
+},
 "109": {
+"character": "Molly",
 "id": "109",
 "next_id": "110",
-"type": "title"
+"text": "Overpriced, burnt coffee with no soul. Folks come here ‘cause they want something real.",
+"type": "dialogue"
 },
 "11": {
 "character": "Pop",
@@ -108,11 +118,11 @@ lines = {
 "type": "dialogue"
 },
 "110": {
-"character": "Percy",
 "id": "110",
-"next_id": "112",
-"text": "Yo, what’s up? You hoop?",
-"type": "dialogue"
+"is_snippet": false,
+"next_id": "84",
+"next_id_after": "",
+"type": "goto"
 },
 "111": {
 "id": "111",
@@ -122,53 +132,44 @@ lines = {
 "112": {
 "id": "112",
 "next_id": "113",
-"responses": PackedStringArray("112", "123", "127", "131"),
-"text": "Do you play here a lot?",
+"text": "I don’t have any more questions.",
 "type": "response"
 },
 "113": {
-"character": "Percy",
+"character": "Molly",
 "id": "113",
-"next_id": "115",
-"text": "Every day. Court’s free, my friends live close—it’s perfect. Nothin’ better than ballin’ with your crew.",
+"next_id": "114",
+"text": "No problem. Come by anytime—coffee’s always fresh.",
 "type": "dialogue"
 },
 "114": {
 "id": "114",
-"next_id": "115",
-"type": ""
-},
-"115": {
-"id": "115",
-"next_id": "116",
-"responses": PackedStringArray("115", "119"),
-"text": "Are you good?",
-"type": "response"
-},
-"116": {
-"character": "Percy",
-"id": "116",
-"next_id": "117",
-"text": "You kiddin’? I got handles, I got a shot. You wanna see?",
-"type": "dialogue"
-},
-"117": {
-"id": "117",
 "is_snippet": false,
-"next_id": "110",
+"next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"118": {
-"id": "118",
-"next_id": "119",
+"115": {
+"id": "115",
+"next_id": "117",
 "type": ""
+},
+"117": {
+"id": "117",
+"next_id": "118",
+"type": "title"
+},
+"118": {
+"character": "Percy",
+"id": "118",
+"next_id": "120",
+"text": "Yo, what’s up? You play?",
+"type": "dialogue"
 },
 "119": {
 "id": "119",
 "next_id": "120",
-"text": "Who’s the best player here?",
-"type": "response"
+"type": ""
 },
 "12": {
 "id": "12",
@@ -178,18 +179,18 @@ lines = {
 "type": "goto"
 },
 "120": {
-"character": "Percy",
 "id": "120",
 "next_id": "121",
-"text": "Me, obviously. But my boy Jamal? He’s got a nasty crossover.",
-"type": "dialogue"
+"responses": PackedStringArray("120", "131", "135", "139"),
+"text": "Do you play here a lot?",
+"type": "response"
 },
 "121": {
+"character": "Percy",
 "id": "121",
-"is_snippet": false,
-"next_id": "110",
-"next_id_after": "",
-"type": "goto"
+"next_id": "123",
+"text": "Every day. Court’s free, my friends live close—it’s perfect. Nothin’ better than ballin’ with your boys.",
+"type": "dialogue"
 },
 "122": {
 "id": "122",
@@ -199,20 +200,21 @@ lines = {
 "123": {
 "id": "123",
 "next_id": "124",
-"text": "Do a lot of kids come here?",
+"responses": PackedStringArray("123", "127"),
+"text": "Are you good?",
 "type": "response"
 },
 "124": {
 "character": "Percy",
 "id": "124",
 "next_id": "125",
-"text": "Oh yeah, this place is always packed after school. Everyone knows this is the spot.",
+"text": "You kiddin’? I'm the best. You wanna see?",
 "type": "dialogue"
 },
 "125": {
 "id": "125",
 "is_snippet": false,
-"next_id": "110",
+"next_id": "118",
 "next_id_after": "",
 "type": "goto"
 },
@@ -224,20 +226,20 @@ lines = {
 "127": {
 "id": "127",
 "next_id": "128",
-"text": "What do you like most about playing here?",
+"text": "Who’s the best player here?",
 "type": "response"
 },
 "128": {
 "character": "Percy",
 "id": "128",
 "next_id": "129",
-"text": "It’s just fun, man. No refs, no stress, just the game and the homies.",
+"text": "Me, obviously. But it ain't about that.",
 "type": "dialogue"
 },
 "129": {
 "id": "129",
 "is_snippet": false,
-"next_id": "110",
+"next_id": "118",
 "next_id_after": "",
 "type": "goto"
 },
@@ -254,39 +256,47 @@ lines = {
 "131": {
 "id": "131",
 "next_id": "132",
-"text": "I don’t have any more questions.",
+"text": "Do a lot of kids come here?",
 "type": "response"
 },
 "132": {
 "character": "Percy",
 "id": "132",
 "next_id": "133",
-"text": "Aight, cool. I’ll be here if you ever wanna run a game.",
+"text": "Oh yeah, this place is always packed after school. Everyone knows this is the spot.",
 "type": "dialogue"
 },
 "133": {
 "id": "133",
 "is_snippet": false,
-"next_id": "110",
+"next_id": "118",
 "next_id_after": "",
 "type": "goto"
 },
 "134": {
 "id": "134",
-"next_id": "136",
+"next_id": "135",
 "type": ""
 },
+"135": {
+"id": "135",
+"next_id": "136",
+"text": "What do you like most about playing here?",
+"type": "response"
+},
 "136": {
+"character": "Percy",
 "id": "136",
 "next_id": "137",
-"type": "title"
+"text": "It’s just fun, man. No refs, no stress, just the game and my friends.",
+"type": "dialogue"
 },
 "137": {
-"character": "Beth",
 "id": "137",
-"next_id": "139",
-"text": "Oh, hello dear. You waiting for service, or just stopping by?",
-"type": "dialogue"
+"is_snippet": false,
+"next_id": "118",
+"next_id_after": "",
+"type": "goto"
 },
 "138": {
 "id": "138",
@@ -296,8 +306,7 @@ lines = {
 "139": {
 "id": "139",
 "next_id": "140",
-"responses": PackedStringArray("139", "150", "154"),
-"text": "Do you come here often?",
+"text": "I don’t have any more questions.",
 "type": "response"
 },
 "14": {
@@ -307,62 +316,54 @@ lines = {
 "type": "response"
 },
 "140": {
-"character": "Beth",
+"character": "Percy",
 "id": "140",
-"next_id": "142",
-"text": "Every Sunday, and most days in between. This church isn’t just a place to pray—it’s where people come together.",
+"next_id": "141",
+"text": "Aight, cool. I’ll be here if you ever wanna run a game.",
 "type": "dialogue"
 },
 "141": {
 "id": "141",
-"next_id": "142",
-"type": ""
-},
-"142": {
-"id": "142",
-"next_id": "143",
-"responses": PackedStringArray("142", "146"),
-"text": "What do you mean?",
-"type": "response"
-},
-"143": {
-"character": "Beth",
-"id": "143",
-"next_id": "144",
-"text": "Oh, it’s everything. Potlucks, meetings, folks helping each other out. If someone needs something, the church is here.",
-"type": "dialogue"
-},
-"144": {
-"id": "144",
 "is_snippet": false,
-"next_id": "137",
+"next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"145": {
-"id": "145",
-"next_id": "146",
+"142": {
+"id": "142",
+"next_id": "144",
 "type": ""
+},
+"144": {
+"id": "144",
+"next_id": "145",
+"type": "title"
+},
+"145": {
+"character": "Beth",
+"id": "145",
+"next_id": "147",
+"text": "Oh, hello dear. You waiting for service, or just stopping by?",
+"type": "dialogue"
 },
 "146": {
 "id": "146",
 "next_id": "147",
-"text": "Have you been coming here long?",
-"type": "response"
+"type": ""
 },
 "147": {
-"character": "Beth",
 "id": "147",
 "next_id": "148",
-"text": "Since I was a little girl. This place has always been part of my life.",
-"type": "dialogue"
+"responses": PackedStringArray("147", "158", "162"),
+"text": "Do you come here often?",
+"type": "response"
 },
 "148": {
+"character": "Beth",
 "id": "148",
-"is_snippet": false,
-"next_id": "137",
-"next_id_after": "",
-"type": "goto"
+"next_id": "150",
+"text": "Every Sunday, and most days in between. This church isn’t just a place to pray—it’s where people come together.",
+"type": "dialogue"
 },
 "149": {
 "id": "149",
@@ -379,20 +380,21 @@ lines = {
 "150": {
 "id": "150",
 "next_id": "151",
-"text": "What do you like most about it?",
+"responses": PackedStringArray("150", "154"),
+"text": "What do you mean?",
 "type": "response"
 },
 "151": {
 "character": "Beth",
 "id": "151",
 "next_id": "152",
-"text": "The people. We all take care of each other. That’s what a real community does.",
+"text": "Oh, it’s everything. Potlucks, meetings, folks helping each other out. If someone needs something, the church is here.",
 "type": "dialogue"
 },
 "152": {
 "id": "152",
 "is_snippet": false,
-"next_id": "137",
+"next_id": "145",
 "next_id_after": "",
 "type": "goto"
 },
@@ -404,20 +406,20 @@ lines = {
 "154": {
 "id": "154",
 "next_id": "155",
-"text": "I don’t have any more questions.",
+"text": "Have you been coming here long?",
 "type": "response"
 },
 "155": {
 "character": "Beth",
 "id": "155",
 "next_id": "156",
-"text": "Alright then, dear. But you’re always welcome here.",
+"text": "Since I was a little girl. This place has always been part of my life.",
 "type": "dialogue"
 },
 "156": {
 "id": "156",
 "is_snippet": false,
-"next_id": "137",
+"next_id": "145",
 "next_id_after": "",
 "type": "goto"
 },
@@ -429,13 +431,14 @@ lines = {
 "158": {
 "id": "158",
 "next_id": "159",
-"type": "title"
+"text": "What do you like most about it?",
+"type": "response"
 },
 "159": {
-"character": "Person",
+"character": "Beth",
 "id": "159",
 "next_id": "160",
-"text": "Love bringing my kids here. It’s always so peaceful.",
+"text": "The people. We all take care of each other. That’s what a real community does.",
 "type": "dialogue"
 },
 "16": {
@@ -445,65 +448,64 @@ lines = {
 },
 "160": {
 "id": "160",
-"next_id": "161",
-"responses": PackedStringArray("160"),
-"text": "Sounds like a great spot.",
-"type": "response"
+"is_snippet": false,
+"next_id": "145",
+"next_id_after": "",
+"type": "goto"
 },
 "161": {
 "id": "161",
-"is_snippet": false,
-"next_id": "end",
-"next_id_after": "",
-"type": "goto"
+"next_id": "162",
+"type": ""
 },
 "162": {
 "id": "162",
 "next_id": "163",
-"type": ""
-},
-"163": {
-"id": "163",
-"next_id": "164",
-"type": "title"
-},
-"164": {
-"character": "Person",
-"id": "164",
-"next_id": "165",
-"text": "I like how clean they keep this park. Makes a big difference.",
-"type": "dialogue"
-},
-"165": {
-"id": "165",
-"next_id": "166",
-"responses": PackedStringArray("165"),
-"text": "Yeah, it really does.",
+"text": "I don’t have any more questions.",
 "type": "response"
 },
-"166": {
-"id": "166",
+"163": {
+"character": "Beth",
+"id": "163",
+"next_id": "164",
+"text": "Alright then, dear. But you’re always welcome here.",
+"type": "dialogue"
+},
+"164": {
+"id": "164",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
+"165": {
+"id": "165",
+"next_id": "166",
+"type": ""
+},
+"166": {
+"id": "166",
+"next_id": "167",
+"type": "title"
+},
 "167": {
+"character": "Person",
 "id": "167",
 "next_id": "168",
-"type": ""
+"text": "I've been coming here since I was a kid. I really love those sandwiches.",
+"type": "dialogue"
 },
 "168": {
 "id": "168",
-"next_id": "169",
-"type": "title"
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
 },
 "169": {
-"character": "Person",
 "id": "169",
 "next_id": "170",
-"text": "The trees here give the best shade in the summer.",
-"type": "dialogue"
+"type": ""
 },
 "17": {
 "id": "17",
@@ -515,64 +517,62 @@ lines = {
 "170": {
 "id": "170",
 "next_id": "171",
-"responses": PackedStringArray("170"),
-"text": "That’s a good thing to have.",
-"type": "response"
+"type": "title"
 },
 "171": {
+"character": "Person",
 "id": "171",
+"next_id": "172",
+"text": "Pop always gives the best advice.",
+"type": "dialogue"
+},
+"172": {
+"id": "172",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
-},
-"172": {
-"id": "172",
-"next_id": "173",
-"type": ""
 },
 "173": {
 "id": "173",
 "next_id": "174",
-"type": "title"
+"type": ""
 },
 "174": {
-"character": "Person",
 "id": "174",
 "next_id": "175",
-"text": "Frank makes the best coffee in town, hands down.",
-"type": "dialogue"
+"type": "title"
 },
 "175": {
+"character": "Person",
 "id": "175",
 "next_id": "176",
-"responses": PackedStringArray("175"),
-"text": "Can’t argue with that.",
-"type": "response"
+"text": "Love bringing my friends here. There's so much to do!",
+"type": "dialogue"
 },
 "176": {
 "id": "176",
+"next_id": "177",
+"responses": PackedStringArray("176"),
+"text": "Sounds like a great spot.",
+"type": "response"
+},
+"177": {
+"id": "177",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"177": {
-"id": "177",
-"next_id": "178",
-"type": ""
-},
 "178": {
 "id": "178",
 "next_id": "179",
-"type": "title"
+"type": ""
 },
 "179": {
-"character": "Person",
 "id": "179",
 "next_id": "180",
-"text": "I come here every morning. Can’t start my day without it.",
-"type": "dialogue"
+"type": "title"
 },
 "18": {
 "character": "Pop",
@@ -582,66 +582,66 @@ lines = {
 "type": "dialogue"
 },
 "180": {
+"character": "Person",
 "id": "180",
 "next_id": "181",
-"responses": PackedStringArray("180"),
-"text": "Gotta have that routine.",
-"type": "response"
+"text": "I like how close this park is to my hosue, sometimes my parents let me come on my own!",
+"type": "dialogue"
 },
 "181": {
 "id": "181",
+"next_id": "182",
+"responses": PackedStringArray("181"),
+"text": "Yeah, it really does.",
+"type": "response"
+},
+"182": {
+"id": "182",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
-},
-"182": {
-"id": "182",
-"next_id": "183",
-"type": ""
 },
 "183": {
 "id": "183",
 "next_id": "184",
-"type": "title"
+"type": ""
 },
 "184": {
-"character": "Person",
 "id": "184",
 "next_id": "185",
-"text": "This place has a real personal touch. Not like those big chains.",
-"type": "dialogue"
+"type": "title"
 },
 "185": {
+"character": "Person",
 "id": "185",
 "next_id": "186",
-"responses": PackedStringArray("185"),
-"text": "Yeah, feels more welcoming.",
-"type": "response"
+"text": "The trees here give the best shade in the summer.",
+"type": "dialogue"
 },
 "186": {
 "id": "186",
+"next_id": "187",
+"responses": PackedStringArray("186"),
+"text": "That’s a good thing to have.",
+"type": "response"
+},
+"187": {
+"id": "187",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"187": {
-"id": "187",
-"next_id": "188",
-"type": ""
-},
 "188": {
 "id": "188",
 "next_id": "189",
-"type": "title"
+"type": ""
 },
 "189": {
-"character": "Person",
 "id": "189",
 "next_id": "190",
-"text": "Best court in the city. We got some real competition out here.",
-"type": "dialogue"
+"type": "title"
 },
 "19": {
 "id": "19",
@@ -651,66 +651,66 @@ lines = {
 "type": "goto"
 },
 "190": {
+"character": "Person",
 "id": "190",
 "next_id": "191",
-"responses": PackedStringArray("190"),
-"text": "Sounds like a good time.",
-"type": "response"
+"text": "Molly makes the best coffee in town, hands down.",
+"type": "dialogue"
 },
 "191": {
 "id": "191",
+"next_id": "192",
+"responses": PackedStringArray("191"),
+"text": "Can’t argue with that.",
+"type": "response"
+},
+"192": {
+"id": "192",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
-},
-"192": {
-"id": "192",
-"next_id": "193",
-"type": ""
 },
 "193": {
 "id": "193",
 "next_id": "194",
-"type": "title"
+"type": ""
 },
 "194": {
-"character": "Person",
 "id": "194",
 "next_id": "195",
-"text": "I grew up playing here. Good to see the next generation still ballin’.",
-"type": "dialogue"
+"type": "title"
 },
 "195": {
+"character": "Person",
 "id": "195",
 "next_id": "196",
-"responses": PackedStringArray("195"),
-"text": "That’s always cool to see.",
-"type": "response"
+"text": "I come here every morning. Can’t start my day without it.",
+"type": "dialogue"
 },
 "196": {
 "id": "196",
+"next_id": "197",
+"responses": PackedStringArray("196"),
+"text": "Gotta have that routine.",
+"type": "response"
+},
+"197": {
+"id": "197",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"197": {
-"id": "197",
-"next_id": "198",
-"type": ""
-},
 "198": {
 "id": "198",
 "next_id": "199",
-"type": "title"
+"type": ""
 },
 "199": {
-"character": "Person",
 "id": "199",
 "next_id": "200",
-"text": "Love that it’s free. Not everyone can afford a gym membership.",
-"type": "dialogue"
+"type": "title"
 },
 "2": {
 "id": "2",
@@ -723,66 +723,66 @@ lines = {
 "type": ""
 },
 "200": {
+"character": "Person",
 "id": "200",
 "next_id": "201",
-"responses": PackedStringArray("200"),
-"text": "Yeah, that makes a big difference.",
-"type": "response"
+"text": "This place has a real personal touch. Not like those big chains.",
+"type": "dialogue"
 },
 "201": {
 "id": "201",
+"next_id": "202",
+"responses": PackedStringArray("201"),
+"text": "Yeah, feels more welcoming.",
+"type": "response"
+},
+"202": {
+"id": "202",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
-},
-"202": {
-"id": "202",
-"next_id": "203",
-"type": ""
 },
 "203": {
 "id": "203",
 "next_id": "204",
-"type": "title"
+"type": ""
 },
 "204": {
-"character": "Person",
 "id": "204",
 "next_id": "205",
-"text": "This church has been a part of my family for generations.",
-"type": "dialogue"
+"type": "title"
 },
 "205": {
+"character": "Person",
 "id": "205",
 "next_id": "206",
-"responses": PackedStringArray("205"),
-"text": "That’s really special.",
-"type": "response"
+"text": "Best court in the city. We got some real competition out here.",
+"type": "dialogue"
 },
 "206": {
 "id": "206",
+"next_id": "207",
+"responses": PackedStringArray("206"),
+"text": "Sounds like a good time.",
+"type": "response"
+},
+"207": {
+"id": "207",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"207": {
-"id": "207",
-"next_id": "208",
-"type": ""
-},
 "208": {
 "id": "208",
 "next_id": "209",
-"type": "title"
+"type": ""
 },
 "209": {
-"character": "Person",
 "id": "209",
 "next_id": "210",
-"text": "Everyone here is so welcoming. Feels like home.",
-"type": "dialogue"
+"type": "title"
 },
 "21": {
 "id": "21",
@@ -791,61 +791,66 @@ lines = {
 "type": "response"
 },
 "210": {
+"character": "Person",
 "id": "210",
 "next_id": "211",
-"responses": PackedStringArray("210"),
-"text": "That’s a great thing to have.",
-"type": "response"
+"text": "I grew up playing here. Good to see the next generation still ballin’.",
+"type": "dialogue"
 },
 "211": {
 "id": "211",
+"next_id": "212",
+"responses": PackedStringArray("211"),
+"text": "That’s always cool to see.",
+"type": "response"
+},
+"212": {
+"id": "212",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
-},
-"212": {
-"id": "212",
-"next_id": "213",
-"type": ""
 },
 "213": {
 "id": "213",
 "next_id": "214",
-"type": "title"
+"type": ""
 },
 "214": {
-"character": "Person",
 "id": "214",
 "next_id": "215",
-"text": "The potlucks here are the best. You ever had Mrs. Thompson’s casserole?",
-"type": "dialogue"
+"type": "title"
 },
 "215": {
+"character": "Person",
 "id": "215",
 "next_id": "216",
-"responses": PackedStringArray("215"),
-"text": "Sounds like I’m missing out.",
-"type": "response"
+"text": "Love that it’s free. Not everyone can afford a gym membership.",
+"type": "dialogue"
 },
 "216": {
 "id": "216",
-"is_snippet": false,
-"next_id": "end",
-"next_id_after": "",
-"type": "goto"
+"next_id": "217",
+"responses": PackedStringArray("216"),
+"text": "Yeah, that makes a big difference.",
+"type": "response"
 },
 "217": {
 "id": "217",
-"next_id": "218",
-"type": ""
-},
-"218": {
-"id": "218",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
+},
+"218": {
+"id": "218",
+"next_id": "219",
+"type": ""
+},
+"219": {
+"id": "219",
+"next_id": "220",
+"type": "title"
 },
 "22": {
 "character": "Pop",
@@ -854,10 +859,105 @@ lines = {
 "text": "Hard to say. They got their own dreams, and I want them to chase ‘em. But if they ever wanna run the store, I’d be proud to pass it on.",
 "type": "dialogue"
 },
+"220": {
+"character": "Person",
+"id": "220",
+"next_id": "221",
+"text": "This church has been a part of my family for generations.",
+"type": "dialogue"
+},
+"221": {
+"id": "221",
+"next_id": "222",
+"responses": PackedStringArray("221"),
+"text": "That’s really special.",
+"type": "response"
+},
+"222": {
+"id": "222",
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
+},
+"223": {
+"id": "223",
+"next_id": "224",
+"type": ""
+},
+"224": {
+"id": "224",
+"next_id": "225",
+"type": "title"
+},
+"225": {
+"character": "Person",
+"id": "225",
+"next_id": "226",
+"text": "Everyone here is so welcoming. Feels like home.",
+"type": "dialogue"
+},
+"226": {
+"id": "226",
+"next_id": "227",
+"responses": PackedStringArray("226"),
+"text": "That’s a great thing to have.",
+"type": "response"
+},
+"227": {
+"id": "227",
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
+},
+"228": {
+"id": "228",
+"next_id": "229",
+"type": ""
+},
+"229": {
+"id": "229",
+"next_id": "230",
+"type": "title"
+},
 "23": {
 "id": "23",
 "is_snippet": false,
 "next_id": "1",
+"next_id_after": "",
+"type": "goto"
+},
+"230": {
+"character": "Person",
+"id": "230",
+"next_id": "231",
+"text": "The potlucks here are the best. You ever had Mrs. Thompson’s casserole?",
+"type": "dialogue"
+},
+"231": {
+"id": "231",
+"next_id": "232",
+"responses": PackedStringArray("231"),
+"text": "Sounds like I’m missing out.",
+"type": "response"
+},
+"232": {
+"id": "232",
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
+},
+"233": {
+"id": "233",
+"next_id": "234",
+"type": ""
+},
+"234": {
+"id": "234",
+"is_snippet": false,
+"next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
@@ -875,96 +975,97 @@ lines = {
 "26": {
 "character": "Pop",
 "id": "26",
-"next_id": "55",
+"next_id": "27",
 "text": "You gotta understand, places like this ain't just stores. We keep folks fed when times are tight, we keep an eye on the block. Somebody needs help, they come here. It's more than just a place to by food.",
 "type": "dialogue"
 },
 "27": {
 "id": "27",
-"next_id": "28",
-"type": ""
+"is_snippet": false,
+"next_id": "1",
+"next_id_after": "",
+"type": "goto"
 },
 "28": {
 "id": "28",
 "next_id": "29",
-"text": "What kinds of things do you sell?",
-"type": "response"
+"type": ""
 },
 "29": {
-"character": "Pop",
 "id": "29",
-"next_id": "31",
-"text": "Coffee, eggs, bread. The basics. And of course, my famous sandwiches. You ever had one?",
-"type": "dialogue"
+"next_id": "30",
+"text": "What kinds of things do you sell?",
+"type": "response"
 },
 "3": {
 "id": "3",
 "next_id": "4",
-"responses": PackedStringArray("3", "14", "25", "28", "39", "50"),
+"responses": PackedStringArray("3", "14", "25", "29", "40", "51"),
 "text": "Tell me about this neighborhood.",
 "type": "response"
 },
 "30": {
+"character": "Pop",
 "id": "30",
-"next_id": "31",
-"type": ""
+"next_id": "32",
+"text": "Coffee, eggs, bread. The basics. And of course, my famous sandwiches. You ever had one?",
+"type": "dialogue"
 },
 "31": {
 "id": "31",
 "next_id": "32",
-"responses": PackedStringArray("31", "35"),
+"type": ""
+},
+"32": {
+"id": "32",
+"next_id": "33",
+"responses": PackedStringArray("32", "36"),
 "text": "No, what’s so special about them?",
 "type": "response"
 },
-"32": {
+"33": {
 "character": "Pop",
-"id": "32",
-"next_id": "33",
+"id": "33",
+"next_id": "34",
 "text": "It’s the love, kid. And the secret seasoning. I of course can’t tell you what it is, but once you try one, you’ll keep coming back.",
 "type": "dialogue"
 },
-"33": {
-"id": "33",
+"34": {
+"id": "34",
 "is_snippet": false,
 "next_id": "1",
 "next_id_after": "",
 "type": "goto"
-},
-"34": {
-"id": "34",
-"next_id": "35",
-"type": ""
 },
 "35": {
 "id": "35",
 "next_id": "36",
+"type": ""
+},
+"36": {
+"id": "36",
+"next_id": "37",
 "text": "Yeah, they’re great!",
 "type": "response"
 },
-"36": {
+"37": {
 "character": "Pop",
-"id": "36",
-"next_id": "37",
+"id": "37",
+"next_id": "38",
 "text": "Ha! You got good taste. Let me know if you ever want another.",
 "type": "dialogue"
 },
-"37": {
-"id": "37",
+"38": {
+"id": "38",
 "is_snippet": false,
 "next_id": "1",
 "next_id_after": "",
 "type": "goto"
 },
-"38": {
-"id": "38",
-"next_id": "39",
-"type": ""
-},
 "39": {
 "id": "39",
 "next_id": "40",
-"text": "How do you keep the store running?",
-"type": "response"
+"type": ""
 },
 "4": {
 "character": "Pop",
@@ -974,67 +1075,68 @@ lines = {
 "type": "dialogue"
 },
 "40": {
-"character": "Pop",
 "id": "40",
-"next_id": "42",
-"text": "Hard work, kid. And knowing your customers, you gotta give them a reason to come by even if we ain't always the cheapest.",
-"type": "dialogue"
+"next_id": "41",
+"text": "How do you keep the store running?",
+"type": "response"
 },
 "41": {
+"character": "Pop",
 "id": "41",
-"next_id": "42",
-"type": ""
+"next_id": "43",
+"text": "Hard work, kid. And knowing your customers, you gotta give them a reason to come by even if we ain't always the cheapest.",
+"type": "dialogue"
 },
 "42": {
 "id": "42",
 "next_id": "43",
-"responses": PackedStringArray("42", "46"),
+"type": ""
+},
+"43": {
+"id": "43",
+"next_id": "44",
+"responses": PackedStringArray("43", "47"),
 "text": "Do you ever think about expanding?",
 "type": "response"
 },
-"43": {
+"44": {
 "character": "Pop",
-"id": "43",
-"next_id": "44",
+"id": "44",
+"next_id": "45",
 "text": "Nah, this place is enough. I ain’t looking to be some big chain. This is a neighborhood shop, always will be.",
 "type": "dialogue"
 },
-"44": {
-"id": "44",
+"45": {
+"id": "45",
 "is_snippet": false,
 "next_id": "1",
 "next_id_after": "",
 "type": "goto"
-},
-"45": {
-"id": "45",
-"next_id": "46",
-"type": ""
 },
 "46": {
 "id": "46",
 "next_id": "47",
+"type": ""
+},
+"47": {
+"id": "47",
+"next_id": "48",
 "text": "What’s the hardest part of running it?",
 "type": "response"
 },
-"47": {
+"48": {
 "character": "Pop",
-"id": "47",
-"next_id": "48",
+"id": "48",
+"next_id": "49",
 "text": "The hours. Early mornings, late nights. But it’s worth it.",
 "type": "dialogue"
 },
-"48": {
-"id": "48",
+"49": {
+"id": "49",
 "is_snippet": false,
 "next_id": "1",
 "next_id_after": "",
 "type": "goto"
-},
-"49": {
-"id": "49",
-"next_id": "50",
-"type": ""
 },
 "5": {
 "id": "5",
@@ -1044,58 +1146,56 @@ lines = {
 "50": {
 "id": "50",
 "next_id": "51",
+"type": ""
+},
+"51": {
+"id": "51",
+"next_id": "52",
 "text": "I don’t have any more questions.",
 "type": "response"
 },
-"51": {
+"52": {
 "character": "Pop",
-"id": "51",
-"next_id": "52",
+"id": "52",
+"next_id": "53",
 "text": "Alright then. But if you ever need somethin’, you know where to find me.",
 "type": "dialogue"
 },
-"52": {
-"id": "52",
+"53": {
+"id": "53",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"53": {
-"id": "53",
-"next_id": "55",
-"type": ""
-},
-"55": {
-"id": "55",
+"54": {
+"id": "54",
 "next_id": "56",
-"type": "title"
+"type": ""
 },
 "56": {
-"character": "Margaret",
 "id": "56",
-"next_id": "58",
-"text": "Oh, hey there! Beautiful day, isn’t it? What’s on your mind?",
-"type": "dialogue"
+"next_id": "57",
+"type": "title"
 },
 "57": {
+"character": "Margaret",
 "id": "57",
-"next_id": "58",
-"type": ""
+"next_id": "59",
+"text": "Oh, hey there! Beautiful day, isn’t it? What’s on your mind?",
+"type": "dialogue"
 },
 "58": {
 "id": "58",
 "next_id": "59",
-"responses": PackedStringArray("58", "69", "73", "77"),
-"text": "How do you like the neighborhood?",
-"type": "response"
+"type": ""
 },
 "59": {
-"character": "Margaret",
 "id": "59",
-"next_id": "61",
-"text": "I love it here. Moved in five years ago, and it already feels like home. It’s such a great place for kids to grow up.",
-"type": "dialogue"
+"next_id": "60",
+"responses": PackedStringArray("59", "70", "74", "78"),
+"text": "How do you like the neighborhood?",
+"type": "response"
 },
 "6": {
 "id": "6",
@@ -1105,66 +1205,67 @@ lines = {
 "type": "response"
 },
 "60": {
+"character": "Margaret",
 "id": "60",
-"next_id": "61",
-"type": ""
+"next_id": "62",
+"text": "I love it here. Moved in five years ago, and it already feels like home. It’s such a great place for kids to grow up.",
+"type": "dialogue"
 },
 "61": {
 "id": "61",
 "next_id": "62",
-"responses": PackedStringArray("61", "65"),
+"type": ""
+},
+"62": {
+"id": "62",
+"next_id": "63",
+"responses": PackedStringArray("62", "66"),
 "text": "Why is it good for kids?",
 "type": "response"
 },
-"62": {
+"63": {
 "character": "Margaret",
-"id": "62",
-"next_id": "63",
+"id": "63",
+"next_id": "64",
 "text": "Oh, there’s so much for them to do! Parks, schools, little events—plus, everyone looks out for each other. I never feel like I’m on my own raising them.",
 "type": "dialogue"
 },
-"63": {
-"id": "63",
-"is_snippet": false,
-"next_id": "56",
-"next_id_after": "",
-"type": "goto"
-},
 "64": {
 "id": "64",
-"next_id": "65",
-"type": ""
+"is_snippet": false,
+"next_id": "57",
+"next_id_after": "",
+"type": "goto"
 },
 "65": {
 "id": "65",
 "next_id": "66",
+"type": ""
+},
+"66": {
+"id": "66",
+"next_id": "67",
 "text": "Do you feel safe here?",
 "type": "response"
 },
-"66": {
+"67": {
 "character": "Margaret",
-"id": "66",
-"next_id": "67",
+"id": "67",
+"next_id": "68",
 "text": "Absolutely. When you know your neighbors, you know someone’s always got your back. It’s not just a street; it’s a community.",
 "type": "dialogue"
 },
-"67": {
-"id": "67",
-"is_snippet": false,
-"next_id": "56",
-"next_id_after": "",
-"type": "goto"
-},
 "68": {
 "id": "68",
-"next_id": "69",
-"type": ""
+"is_snippet": false,
+"next_id": "57",
+"next_id_after": "",
+"type": "goto"
 },
 "69": {
 "id": "69",
 "next_id": "70",
-"text": "Have your kids made a lot of friends?",
-"type": "response"
+"type": ""
 },
 "7": {
 "character": "Pop",
@@ -1174,68 +1275,67 @@ lines = {
 "type": "dialogue"
 },
 "70": {
-"character": "Margaret",
 "id": "70",
 "next_id": "71",
+"text": "Have your kids made a lot of friends?",
+"type": "response"
+},
+"71": {
+"character": "Margaret",
+"id": "71",
+"next_id": "72",
 "text": "Oh, tons! They run off to play the second we step outside. It’s nice knowing they’re growing up with people who care about them.",
 "type": "dialogue"
 },
-"71": {
-"id": "71",
-"is_snippet": false,
-"next_id": "56",
-"next_id_after": "",
-"type": "goto"
-},
 "72": {
 "id": "72",
-"next_id": "73",
-"type": ""
+"is_snippet": false,
+"next_id": "57",
+"next_id_after": "",
+"type": "goto"
 },
 "73": {
 "id": "73",
 "next_id": "74",
+"type": ""
+},
+"74": {
+"id": "74",
+"next_id": "75",
 "text": "What’s your favorite part of living here?",
 "type": "response"
 },
-"74": {
+"75": {
 "character": "Margaret",
-"id": "74",
-"next_id": "75",
+"id": "75",
+"next_id": "76",
 "text": "The people, hands down. There’s always a familiar face, always someone to talk to. It just feels right, y’know?",
 "type": "dialogue"
 },
-"75": {
-"id": "75",
-"is_snippet": false,
-"next_id": "56",
-"next_id_after": "",
-"type": "goto"
-},
 "76": {
 "id": "76",
-"next_id": "77",
-"type": ""
+"is_snippet": false,
+"next_id": "57",
+"next_id_after": "",
+"type": "goto"
 },
 "77": {
 "id": "77",
 "next_id": "78",
+"type": ""
+},
+"78": {
+"id": "78",
+"next_id": "79",
 "text": "I don’t have any more questions.",
 "type": "response"
 },
-"78": {
+"79": {
 "character": "Margaret",
-"id": "78",
-"next_id": "79",
+"id": "79",
+"next_id": "80",
 "text": "Well, if you ever wanna chat, I’m usually right here with the little ones. Take care!",
 "type": "dialogue"
-},
-"79": {
-"id": "79",
-"is_snippet": false,
-"next_id": "56",
-"next_id_after": "",
-"type": "goto"
 },
 "8": {
 "id": "8",
@@ -1246,58 +1346,58 @@ lines = {
 },
 "80": {
 "id": "80",
-"next_id": "82",
-"type": ""
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
 },
-"82": {
-"id": "82",
+"81": {
+"id": "81",
 "next_id": "83",
-"type": "title"
+"type": ""
 },
 "83": {
-"character": "Frank",
 "id": "83",
-"next_id": "85",
-"text": "Hey there, welcome to Frank’s! What can I get you?",
-"type": "dialogue"
+"next_id": "84",
+"type": "title"
 },
 "84": {
+"character": "Molly",
 "id": "84",
-"next_id": "85",
-"type": ""
+"next_id": "86",
+"text": "Hey there, welcome to Frank’s! What can I get you?",
+"type": "dialogue"
 },
 "85": {
 "id": "85",
 "next_id": "86",
-"responses": PackedStringArray("85", "96", "100", "104"),
+"type": ""
+},
+"86": {
+"id": "86",
+"next_id": "87",
+"responses": PackedStringArray("86", "97", "104", "108", "112"),
 "text": "How long have you had this place?",
 "type": "response"
 },
-"86": {
-"character": "Frank",
-"id": "86",
-"next_id": "88",
+"87": {
+"character": "Molly",
+"id": "87",
+"next_id": "89",
 "text": "Opened it myself fifteen years ago. Best decision I ever made. This shop? It’s my pride and joy.",
 "type": "dialogue"
-},
-"87": {
-"id": "87",
-"next_id": "88",
-"type": ""
 },
 "88": {
 "id": "88",
 "next_id": "89",
-"responses": PackedStringArray("88", "92"),
-"text": "What made you want to start a coffee shop?",
-"type": "response"
+"type": ""
 },
 "89": {
-"character": "Frank",
 "id": "89",
 "next_id": "90",
-"text": "Always loved coffee, always loved people. Figured, why not put ‘em together? Turns out, I’m pretty good at it.",
-"type": "dialogue"
+"responses": PackedStringArray("89", "93"),
+"text": "What made you want to start a coffee shop?",
+"type": "response"
 },
 "9": {
 "id": "9",
@@ -1305,61 +1405,61 @@ lines = {
 "type": ""
 },
 "90": {
+"character": "Molly",
 "id": "90",
-"is_snippet": false,
-"next_id": "83",
-"next_id_after": "",
-"type": "goto"
+"next_id": "91",
+"text": "Always loved coffee, always loved people. Figured, why not put ‘em together? Turns out, I’m pretty good at it.",
+"type": "dialogue"
 },
 "91": {
 "id": "91",
-"next_id": "92",
-"type": ""
+"is_snippet": false,
+"next_id": "84",
+"next_id_after": "",
+"type": "goto"
 },
 "92": {
 "id": "92",
 "next_id": "93",
+"type": ""
+},
+"93": {
+"id": "93",
+"next_id": "94",
 "text": "Do you ever think about expanding?",
 "type": "response"
 },
-"93": {
-"character": "Frank",
-"id": "93",
-"next_id": "94",
+"94": {
+"character": "Molly",
+"id": "94",
+"next_id": "95",
 "text": "Nah, I like knowing my customers, not just serving ‘em. Once you go big, you lose that personal touch.",
 "type": "dialogue"
 },
-"94": {
-"id": "94",
-"is_snippet": false,
-"next_id": "83",
-"next_id_after": "",
-"type": "goto"
-},
 "95": {
 "id": "95",
-"next_id": "96",
-"type": ""
+"is_snippet": false,
+"next_id": "84",
+"next_id_after": "",
+"type": "goto"
 },
 "96": {
 "id": "96",
 "next_id": "97",
-"text": "What’s the most popular drink here?",
-"type": "response"
+"type": ""
 },
 "97": {
-"character": "Frank",
 "id": "97",
 "next_id": "98",
-"text": "My house blend. Smooth, rich, and better than anything you’ll find at those chains.",
-"type": "dialogue"
+"text": "Why is it called Frank's?",
+"type": "response"
 },
 "98": {
+"character": "Molly",
 "id": "98",
-"is_snippet": false,
-"next_id": "83",
-"next_id_after": "",
-"type": "goto"
+"next_id": "100",
+"text": "Oh! I'm not sure really, it just sounded right.",
+"type": "dialogue"
 },
 "99": {
 "id": "99",
@@ -1394,7 +1494,8 @@ Pop: Welcome in, kid. What can I do for ya?
 
 - Why is this store so important?
 	Pop: You gotta understand, places like this ain't just stores. We keep folks fed when times are tight, we keep an eye on the block. Somebody needs help, they come here. It's more than just a place to by food.
-
+	=> pop_start
+	
 - What kinds of things do you sell?
 	Pop: Coffee, eggs, bread. The basics. And of course, my famous sandwiches. You ever had one?
 
@@ -1446,48 +1547,55 @@ Margaret: Oh, hey there! Beautiful day, isn’t it? What’s on your mind?
 
 - I don’t have any more questions.
 	Margaret: Well, if you ever wanna chat, I’m usually right here with the little ones. Take care!
-	=> margaret_start
+	=> END
 
 
-~ frank_start
-Frank: Hey there, welcome to Frank’s! What can I get you?
+~ molly_start
+Molly: Hey there, welcome to Frank’s! What can I get you?
 
 - How long have you had this place?
-	Frank: Opened it myself fifteen years ago. Best decision I ever made. This shop? It’s my pride and joy.
+	Molly: Opened it myself fifteen years ago. Best decision I ever made. This shop? It’s my pride and joy.
 
 	- What made you want to start a coffee shop?
-		Frank: Always loved coffee, always loved people. Figured, why not put ‘em together? Turns out, I’m pretty good at it.
-		=> frank_start
+		Molly: Always loved coffee, always loved people. Figured, why not put ‘em together? Turns out, I’m pretty good at it.
+		=> molly_start
 
 	- Do you ever think about expanding?
-		Frank: Nah, I like knowing my customers, not just serving ‘em. Once you go big, you lose that personal touch.
-		=> frank_start
+		Molly: Nah, I like knowing my customers, not just serving ‘em. Once you go big, you lose that personal touch.
+		=> molly_start
+
+- Why is it called Frank's?
+	Molly: Oh! I'm not sure really, it just sounded right. 
+	
+	- But your name's Molly?
+		Hank changed my name to Molly but did not want to draw the sign again...
+		=> molly_start
 
 - What’s the most popular drink here?
-	Frank: My house blend. Smooth, rich, and better than anything you’ll find at those chains.
-	=> frank_start
+	Molly: My house blend. Smooth, rich, and better than anything you’ll find at those chains.
+	=> molly_start
 
 - What do you think about Starbucks?
-	Frank: Overpriced, burnt coffee with no soul. Folks come here ‘cause they want something real.
-	=> frank_start
+	Molly: Overpriced, burnt coffee with no soul. Folks come here ‘cause they want something real.
+	=> molly_start
 
 - I don’t have any more questions.
-	Frank: No problem. Come by anytime—coffee’s always fresh.
-	=> frank_start
+	Molly: No problem. Come by anytime—coffee’s always fresh.
+	=> END
 
 
 ~ percy_start
-Percy: Yo, what’s up? You hoop?
+Percy: Yo, what’s up? You play?
 
 - Do you play here a lot?
-	Percy: Every day. Court’s free, my friends live close—it’s perfect. Nothin’ better than ballin’ with your crew.
+	Percy: Every day. Court’s free, my friends live close—it’s perfect. Nothin’ better than ballin’ with your boys.
 
 	- Are you good?
-		Percy: You kiddin’? I got handles, I got a shot. You wanna see?
+		Percy: You kiddin’? I'm the best. You wanna see?
 		=> percy_start
 
 	- Who’s the best player here?
-		Percy: Me, obviously. But my boy Jamal? He’s got a nasty crossover.
+		Percy: Me, obviously. But it ain't about that. 
 		=> percy_start
 
 - Do a lot of kids come here?
@@ -1495,12 +1603,12 @@ Percy: Yo, what’s up? You hoop?
 	=> percy_start
 
 - What do you like most about playing here?
-	Percy: It’s just fun, man. No refs, no stress, just the game and the homies.
+	Percy: It’s just fun, man. No refs, no stress, just the game and my friends.
 	=> percy_start
 
 - I don’t have any more questions.
 	Percy: Aight, cool. I’ll be here if you ever wanna run a game.
-	=> percy_start
+	=> END
 
 
 ~ beth_start
@@ -1523,15 +1631,23 @@ Beth: Oh, hello dear. You waiting for service, or just stopping by?
 
 - I don’t have any more questions.
 	Beth: Alright then, dear. But you’re always welcome here.
-	=> beth_start
+	=> END
+
+~ store_extra_1
+Person: I've been coming here since I was a kid. I really love those sandwiches.
+=> END
+
+~ store_extra_2
+Person: Pop always gives the best advice. 
+=> END 
 
 ~ park_extra_1  
-Person: Love bringing my kids here. It’s always so peaceful.  
+Person: Love bringing my friends here. There's so much to do!  
 - Sounds like a great spot.  
   => END  
 
 ~ park_extra_2  
-Person: I like how clean they keep this park. Makes a big difference.  
+Person: I like how close this park is to my hosue, sometimes my parents let me come on my own!
 - Yeah, it really does.  
   => END  
 
@@ -1541,7 +1657,7 @@ Person: The trees here give the best shade in the summer.
   => END  
  
 ~ coffee_extra_1  
-Person: Frank makes the best coffee in town, hands down.  
+Person: Molly makes the best coffee in town, hands down.  
 - Can’t argue with that.  
   => END  
 
@@ -1555,7 +1671,7 @@ Person: This place has a real personal touch. Not like those big chains.
 - Yeah, feels more welcoming.  
   => END  
 
-~ court_xtra_1  
+~ court_extra_1  
 Person: Best court in the city. We got some real competition out here.  
 - Sounds like a good time.  
   => END  

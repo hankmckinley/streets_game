@@ -25,7 +25,8 @@ Pop: Welcome in, kid. What can I do for ya?
 
 - Why is this store so important?
 	Pop: You gotta understand, places like this ain't just stores. We keep folks fed when times are tight, we keep an eye on the block. Somebody needs help, they come here. It's more than just a place to by food.
-
+	=> pop_start
+	
 - What kinds of things do you sell?
 	Pop: Coffee, eggs, bread. The basics. And of course, my famous sandwiches. You ever had one?
 
@@ -77,48 +78,55 @@ Margaret: Oh, hey there! Beautiful day, isn’t it? What’s on your mind?
 
 - I don’t have any more questions.
 	Margaret: Well, if you ever wanna chat, I’m usually right here with the little ones. Take care!
-	=> margaret_start
+	=> END
 
 
-~ frank_start
-Frank: Hey there, welcome to Frank’s! What can I get you?
+~ molly_start
+Molly: Hey there, welcome to Frank’s! What can I get you?
 
 - How long have you had this place?
-	Frank: Opened it myself fifteen years ago. Best decision I ever made. This shop? It’s my pride and joy.
+	Molly: Opened it myself fifteen years ago. Best decision I ever made. This shop? It’s my pride and joy.
 
 	- What made you want to start a coffee shop?
-		Frank: Always loved coffee, always loved people. Figured, why not put ‘em together? Turns out, I’m pretty good at it.
-		=> frank_start
+		Molly: Always loved coffee, always loved people. Figured, why not put ‘em together? Turns out, I’m pretty good at it.
+		=> molly_start
 
 	- Do you ever think about expanding?
-		Frank: Nah, I like knowing my customers, not just serving ‘em. Once you go big, you lose that personal touch.
-		=> frank_start
+		Molly: Nah, I like knowing my customers, not just serving ‘em. Once you go big, you lose that personal touch.
+		=> molly_start
+
+- Why is it called Frank's?
+	Molly: Oh! I'm not sure really, it just sounded right. 
+	
+	- But your name's Molly?
+		Hank changed my name to Molly but did not want to draw the sign again...
+		=> molly_start
 
 - What’s the most popular drink here?
-	Frank: My house blend. Smooth, rich, and better than anything you’ll find at those chains.
-	=> frank_start
+	Molly: My house blend. Smooth, rich, and better than anything you’ll find at those chains.
+	=> molly_start
 
 - What do you think about Starbucks?
-	Frank: Overpriced, burnt coffee with no soul. Folks come here ‘cause they want something real.
-	=> frank_start
+	Molly: Overpriced, burnt coffee with no soul. Folks come here ‘cause they want something real.
+	=> molly_start
 
 - I don’t have any more questions.
-	Frank: No problem. Come by anytime—coffee’s always fresh.
-	=> frank_start
+	Molly: No problem. Come by anytime—coffee’s always fresh.
+	=> END
 
 
 ~ percy_start
-Percy: Yo, what’s up? You hoop?
+Percy: Yo, what’s up? You play?
 
 - Do you play here a lot?
-	Percy: Every day. Court’s free, my friends live close—it’s perfect. Nothin’ better than ballin’ with your crew.
+	Percy: Every day. Court’s free, my friends live close—it’s perfect. Nothin’ better than ballin’ with your boys.
 
 	- Are you good?
-		Percy: You kiddin’? I got handles, I got a shot. You wanna see?
+		Percy: You kiddin’? I'm the best. You wanna see?
 		=> percy_start
 
 	- Who’s the best player here?
-		Percy: Me, obviously. But my boy Jamal? He’s got a nasty crossover.
+		Percy: Me, obviously. But it ain't about that. 
 		=> percy_start
 
 - Do a lot of kids come here?
@@ -126,12 +134,12 @@ Percy: Yo, what’s up? You hoop?
 	=> percy_start
 
 - What do you like most about playing here?
-	Percy: It’s just fun, man. No refs, no stress, just the game and the homies.
+	Percy: It’s just fun, man. No refs, no stress, just the game and my friends.
 	=> percy_start
 
 - I don’t have any more questions.
 	Percy: Aight, cool. I’ll be here if you ever wanna run a game.
-	=> percy_start
+	=> END
 
 
 ~ beth_start
@@ -154,15 +162,23 @@ Beth: Oh, hello dear. You waiting for service, or just stopping by?
 
 - I don’t have any more questions.
 	Beth: Alright then, dear. But you’re always welcome here.
-	=> beth_start
+	=> END
+
+~ store_extra_1
+Person: I've been coming here since I was a kid. I really love those sandwiches.
+=> END
+
+~ store_extra_2
+Person: Pop always gives the best advice. 
+=> END 
 
 ~ park_extra_1  
-Person: Love bringing my kids here. It’s always so peaceful.  
+Person: Love bringing my friends here. There's so much to do!  
 - Sounds like a great spot.  
   => END  
 
 ~ park_extra_2  
-Person: I like how clean they keep this park. Makes a big difference.  
+Person: I like how close this park is to my hosue, sometimes my parents let me come on my own!
 - Yeah, it really does.  
   => END  
 
@@ -172,7 +188,7 @@ Person: The trees here give the best shade in the summer.
   => END  
  
 ~ coffee_extra_1  
-Person: Frank makes the best coffee in town, hands down.  
+Person: Molly makes the best coffee in town, hands down.  
 - Can’t argue with that.  
   => END  
 
@@ -186,7 +202,7 @@ Person: This place has a real personal touch. Not like those big chains.
 - Yeah, feels more welcoming.  
   => END  
 
-~ court_xtra_1  
+~ court_extra_1  
 Person: Best court in the city. We got some real competition out here.  
 - Sounds like a good time.  
   => END  
